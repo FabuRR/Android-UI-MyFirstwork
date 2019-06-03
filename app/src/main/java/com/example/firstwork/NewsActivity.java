@@ -1,5 +1,6 @@
 package com.example.firstwork;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -29,11 +30,17 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
             actionBar.hide();
         }
 
+        Intent intent = getIntent();
+
+        String news_title = intent.getStringExtra("news_title");
+        int news_imgId = intent.getIntExtra("news_img", -1);
+        String news_content = intent.getStringExtra("news_content");
+
         initWidgets();
         category.setText("资讯");
-        title.setText("TITLE");
+        title.setText(news_title);
         author.setText("AUTHOR");
-        content_text.setText("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV");
+        content_text.setText(news_content);
 
     }
 

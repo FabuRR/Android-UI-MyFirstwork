@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         view_pager.setOffscreenPageLimit(4);
         view_pager.setAdapter(mFragmentAdapter);
         view_pager.setCurrentItem(0);
-        article_button.setTextColor(Color.rgb(222, 222, 222));
+        article_button.setTextColor(Color.rgb(255, 255, 150));
         article_button.setTextSize(24);
 
         view_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener(){
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onPageSelected(int i) {
                 switch(i){
                     case 0:
-                        article_button.setTextColor(Color.rgb(222, 222, 222));
+                        article_button.setTextColor(Color.rgb(255, 255, 150));
                         article_button.setTextSize(24);
                         news_button.setTextColor(Color.rgb(255,255,255));
                         news_button.setTextSize(20);
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     case 1:
                         article_button.setTextColor(Color.rgb(255, 255, 255));
                         article_button.setTextSize(20);
-                        news_button.setTextColor(Color.rgb(222, 222, 222));
+                        news_button.setTextColor(Color.rgb(255, 255, 150));
                         news_button.setTextSize(24);
                         break;
                 }

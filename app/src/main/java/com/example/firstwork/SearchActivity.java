@@ -1,5 +1,6 @@
 package com.example.firstwork;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,8 +46,12 @@ public class SearchActivity extends AppCompatActivity {
                     //progressBar.setVisibility(View.VISIBLE);
                 String input = content.getText().toString();
                 if(!input.equals("")){
-                    Toast.makeText(SearchActivity.this, "正在搜索"+input, Toast.LENGTH_SHORT).show();
-                    progressBar.setVisibility(View.VISIBLE);
+                    Toast.makeText(SearchActivity.this, "正在访问"+input, Toast.LENGTH_SHORT).show();
+                    //progressBar.setVisibility(View.VISIBLE);
+                    Intent intent = new Intent(SearchActivity.this, WebActivity.class);
+                    intent.putExtra("url", input);
+                    startActivity(intent);
+                    content.setText("");
                 }else{
                     Toast.makeText(SearchActivity.this, "请输入关键字", Toast.LENGTH_SHORT).show();
                 }

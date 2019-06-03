@@ -20,7 +20,7 @@
         android:textSize="20sp"
         android:textColor="#fff"
         android:layout_gravity="bottom"
-        android:hint="搜索内容"
+        android:hint="浏览网页"
         android:textColorHint="#66BBBB"
         android:maxLines="1"/>
 
